@@ -22,19 +22,35 @@
       <span onclick="openNav()"><img src="assets/menu-icon-24px-01.png"></span>
     </nav>
 
-  <div class="container-fluid no-padding">
+  <!--<div class="container-fluid no-padding">
     <div class="row">
       <div class="col">
 
-
           <img src="assets/FrenchFriesLogo.svg" id="logo" class="mx-auto d-block">
-          <!--<img src="assets/audioplayer-btn-72.png" id="audio-btn" class="mx-auto d-block">-->
-          <!--<img src="assets/audioplayer-btn-72.png" id="audio-btn">-->
 
         </div>
       </div>
+    </div>-->
+<!--SWIPE PAGES!**********************************************************************************************-->
+    <div class="container-fluid no-padding" id="cover"
+      ontouchstart="coverhandleTouchStart(event)"
+      ontouchmove="coverhandleTouchMove(event)"
+      ontouchend="coverhandleTouchEnd(event)">
+      <div class="row">
+        <div class="col">
+          <img src="assets/FrenchFriesLogo.svg" id="logo" class="mx-auto d-block">
+        </div>
+      </div>
+
     </div>
 
+    <div class="container-fluid no padding" id="middle1"
+      ontouchstart="middle1handleTouchStart(event)"
+      ontouchmove="middle1handleTouchMove(event)"
+      ontouchend="middle1handleTouchEnd(event)">
+    </div>
+
+<!--AUDIO PLAYER!**********************************************************************************************-->
       <div class="container-fluid no-padding" id="audioplyr-cont">
         <div class="row">
           <div class="col">
@@ -65,5 +81,6 @@
 
 
     <script src="main.js"></script>
+    <script src="swipey.js"></script>
   </body>
   </html>
