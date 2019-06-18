@@ -11,7 +11,7 @@
 
   </head>
   <body>
-    <nav>
+    <!--<nav>
       <div id="albumNav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="about.html">About</a>
@@ -20,22 +20,12 @@
       </div>
 
       <span onclick="openNav()"><img src="assets/menu-icon-24px-01.png"></span>
-    </nav>
+    </nav>-->
 
-  <!--<div class="container-fluid no-padding">
-    <div class="row">
-      <div class="col">
 
-          <img src="assets/FrenchFriesLogo.svg" id="logo" class="mx-auto d-block">
-
-        </div>
-      </div>
-    </div>-->
 <!--SWIPE PAGES!**********************************************************************************************-->
-    <div class="container-fluid no-padding" id="cover"
-      ontouchstart="coverhandleTouchStart(event)"
-      ontouchmove="coverhandleTouchMove(event)"
-      ontouchend="coverhandleTouchEnd(event)">
+  <div class="container-fluid no-padding" id="swipe-container">
+    <div class="container-fluid no-padding" id="cover">
       <div class="row">
         <div class="col">
           <img src="assets/FrenchFriesLogo.svg" id="logo" class="mx-auto d-block">
@@ -44,17 +34,23 @@
 
     </div>
 
-    <div class="container-fluid no padding" id="middle1"
-      ontouchstart="middle1handleTouchStart(event)"
-      ontouchmove="middle1handleTouchMove(event)"
-      ontouchend="middle1handleTouchEnd(event)">
+    <div class="container-fluid no padding" id="middle">
     </div>
+
+    <div class="container-fluid no padding" id="middle2">
+    </div>
+
+    <div class="container-fluid no padding" id="back">
+    </div>
+  </div>
+
 
 <!--AUDIO PLAYER!**********************************************************************************************-->
       <div class="container-fluid no-padding" id="audioplyr-cont">
         <div class="row">
           <div class="col">
-            <img src="assets/audioplayer-btn-72.png" id="audio-btn" class="mx-auto d-block">
+            <img src="assets/audioplayer-btn-72.png" id="audio-btn">
+            <!--<img src="assets/audioplayer-btn-72.png" id="audio-btn" class="mx-auto d-block">-->
             <div class="audio-player" id="player">
               <div class="controllers">
                   <img src="assets/back.svg" id="skip-back" width=50px onclick="previous()">
@@ -71,7 +67,7 @@
             </div>
           </div>
         </div>
-      </div>
+
 
 
 

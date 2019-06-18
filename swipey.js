@@ -1,75 +1,68 @@
-var cover = document.getElementById('cover');
-var middle1 = document.getElementById('middle1');
-/*NEED TO ADD 'MIDDLE2' AND 'BACK'*/
-var startingX;
+let cover = document.querySelector('#cover');
+let middle = document.querySelector('#middle');
+let middle2 = document.querySelector('#middle2');
+let back = document.querySelector('#back');
 
-function coverhandleTouchStart(evt) {
-  startingX = evt.touches[0].clientX;
-  evt.preventDefault();
+
+
+cover.addEventListener("touchstart", startTouch, false);
+cover.addEventListener("touchmove", moveTouch, false);
+middle.addEventListener("touchstart", startTouch, false);
+middle.addEventListener("touchmove", moveTouch, false);
+middle2.addEventListener("touchstart", startTouch, false);
+middle2.addEventListener("touchmove", moveTouch, false);
+back.addEventListener("touchstart", startTouch, false);
+back.addEventListener("touchmove", moveTouch, false);
+ 
+// Swipe Up / Down / Left / Right
+var initialX = null;
+var initialY = null;
+ 
+function startTouch(e) {
+  initialX = e.touches[0].clientX;
+  initialY = e.touches[0].clientY;
+
 };
+ 
+function moveTouch(e) {
+  if (initialX === null) {
+    return;
+  }
+ 
+  if (initialY === null) {
+    return;
+  }
+ 
+  var currentX = e.touches[0].clientX;
+  var currentY = e.touches[0].clientY;
+ 
+  var diffX = initialX - currentX;
+  var diffY = initialY - currentY;
+ 
+  if (Math.abs(diffX) > Math.abs(diffY)) {
+    // sliding horizontally
+    if (diffX > 0) {
+      // swiped left
+      console.log("swiped left");
 
-function coverhandleTouchMove(evt) {
-  var touch = evt.touches[0];
-  var change = startingX - touch.clientX;
+    } else {
+      // swiped right
+      console.log("swiped right");
 
-  if (change < 0) {
-    return;
-  }
-
-  cover.style.left = '-' + change + 'px';
-  middle1.style.display = 'block';
-  middle1.style.left = (screen.width - change) + 'px';
-  evt.preventDefault();
-};
-
-function coverhandleTouchEnd(evt) {
-  var change = startingX - evt.changedTouches[0].clientX;
-  var threshold = screen.width / 3;
-  if (change < threshold) {
-    cover.style.left = 0;
-    middle1.style.left = '100%';
-    middle1.style.display = 'none';
-  } else {
-    cover.style.transition = 'all .3s';
-    middle1.style.transition = 'all .3s';
-    cover.style.left = '100%';
-    //cover.style.display = 'none';
-    middle1.style.left = '0';
-    middle1.style.display = 'block';
-  }
-};
-
-function middle1handleTouchStart(evt) {
-  startingX = evt.touches [0].clientX;
-  cover.style.transition = '';
-  middle1.style.transition = '';
-  cover.style.display = 'none';
-  evt.preventDefault();
-};
-
-function middle1handleTouchMove(evt) {
-  var touch = evt.touches[0];
-  var change = touch.clientX - startingX;
-  if (change < 0) {
-    return;
-  }
-  cover.style.display = 'block';
-  cover.style.left = (change - screen.width) + 'px';
-  middle1.style.left = change + 'px';
-  evt.preventDefault();
-};
-
-function middle1handleTouchEnd(evt) {
-  var change = evt.changedTouches [0].clientX - startingX;
-  var half = screen.width / 4;
-  if (change < half) {
-    cover.style.left = '-100%';
-    cover.style.display = 'none';
-    middle1.style.left = '0';
-  } else {
-    cover.style.transition = 'all .3s';
-    middle1.style.transition = 'all .3s';
-    cover.style.left = '0';
-    middle1.style.left = '100%';
-  }
+    } 
+  } else {
+    // sliding vertically
+    if (diffY > 0) {
+      // swiped up
+      console.log("swiped up");
+    } else {
+      // swiped down
+      console.log("swiped down");
+    } 
+  }
+ 
+  initialX = null;
+  //initialY = null;
+   
+  e.preventDefault();
 };
