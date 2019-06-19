@@ -2,7 +2,6 @@ html {
   height: 100%;
   width: 100%;
   /*overflow: hidden;*/
-  -webkit-overflow-scrolling: touch;
 
 }
 
@@ -285,7 +284,8 @@ mark {
 #swipe-container {
   position: relative;
   /*overflow-y: hidden;*/
-  overflow-y: scroll;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 #cover {
   position: absolute;
@@ -297,7 +297,6 @@ mark {
   z-index: 1;
   /*transition: transform .5s ease-out;*/
   -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
 }
 
 #middle {
@@ -312,7 +311,7 @@ mark {
   z-index: 1;
   /*transition: transform .3s ease-out;*/
   -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
+
 }
 
 #middle2 {
@@ -325,7 +324,7 @@ mark {
   z-index: 1;
   /*transition: transform .3s ease-out;*/
   -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
+
 }
 
 #back {
@@ -338,7 +337,6 @@ mark {
   z-index: 1;
   /*transition: transform .3s ease-out;*/
   -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
 }
 /*home*/
 
