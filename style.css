@@ -293,8 +293,9 @@ mark {
   background-color: #f9f4cd;
   /*overflow: hidden;*/
   z-index: 1;
-  transition: transform .5s ease-out;
+  /*transition: transform .5s ease-out;*/
   -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
 }
 
 #middle {
@@ -307,8 +308,9 @@ mark {
   background-color: #212121;
   /*overflow: hidden;*/
   z-index: 1;
-  transition: transform .3s ease-out;
+  /*transition: transform .3s ease-out;*/
   -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
 }
 
 #middle2 {
@@ -319,8 +321,9 @@ mark {
   background-color: #facdd2;
   /*overflow: hidden;*/
   z-index: 1;
-  transition: transform .3s ease-out;
+  /*transition: transform .3s ease-out;*/
   -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
 }
 
 #back {
@@ -331,8 +334,9 @@ mark {
   background-color: #84d2f6;
   /*overflow: hidden;*/
   z-index: 1;
-  transition: transform .3s ease-out;
+  /*transition: transform .3s ease-out;*/
   -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
 }
 /*home*/
 
