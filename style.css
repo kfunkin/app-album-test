@@ -292,6 +292,7 @@ mark {
   background-color: #f9f4cd;
   overflow: hidden;
   z-index: 1;
+  transition: transform .5s ease-out;
 }
 
 #middle {
@@ -304,6 +305,7 @@ mark {
   background-color: #212121;
   overflow: hidden;
   z-index: 1;
+  transition: transform .5s ease-out;
 }
 
 #middle2 {
@@ -314,6 +316,7 @@ mark {
   background-color: #facdd2;
   overflow: hidden;
   z-index: 1;
+  transition: transform .5s ease-out;
 }
 
 #back {
@@ -324,6 +327,7 @@ mark {
   background-color: #84d2f6;
   overflow: hidden;
   z-index: 1;
+  transition: transform .5s ease-out;
 }
 /*home*/
 
