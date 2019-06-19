@@ -133,7 +133,7 @@ function seekSong() {
 }*/
 
 //DRAG FUNCTION!!************************************************************************************************************
-var logo = document.querySelector("#logo");
+/*var logo = document.querySelector("#logo");
 var dragContainer = document.querySelector(".drag-container");
 
 var active = false;
@@ -190,4 +190,4 @@ function drag(e) {
 
 function setTranslate(xPos, yPos, el) {
   el.style.transform = "translate3d(" + xPos + "px, " +yPos +"px, 0)";
-}
+}*/
