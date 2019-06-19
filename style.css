@@ -282,7 +282,8 @@ mark {
 
 #swipe-container {
   position: relative;
-  overflow-y: hidden;
+  /*overflow-y: hidden;*/
+  overflow-y: scroll;
 }
 #cover {
   position: absolute;
