@@ -6,7 +6,6 @@ html {
 
 body {
   background-color: #f9f4cd;
-  font-family: helvetica, sans-serif;
   font-size: 0.6rem;
   letter-spacing: 0.1em;
   min-height: 100%;
@@ -325,6 +324,7 @@ mark {
 }
 
 
+/*MIDDLE1***************************************************************************************************************/
 
 
 #middle {
@@ -335,7 +335,7 @@ mark {
   overflow: hidden;
   z-index: 1;
   opacity: 0.8;
-  background-color: #212121;
+  background-color: #facdd2;
   /*transition: transform .3s ease-out;*/
   -webkit-overflow-scrolling: touch;
 }
@@ -361,18 +361,20 @@ overflow: hidden;
 }
 
 
+/*MIDDLE2***************************************************************************************************************/
+
 
 #middle2 {
   display: block;
   position: absolute;
   top:0;
   left: 200%;
-  background-color: #facdd2;
+  background-color: #000000;
   overflow: hidden;
   z-index: 1;
-  opacity: 0.8;
   /*transition: transform .3s ease-out;*/
   -webkit-overflow-scrolling: touch;
+  text-align:center;
 
 }
 
@@ -380,23 +382,132 @@ overflow: hidden;
 overflow: hidden;
 }
 
-#mid2-2 {
-  overflow: hidden;
-}
 
 #middle2row {
   height: 100%;
 }
 
-#mid-pic-2 {
-  position: absolute;
-  top:70px;
-  left: -10px;
-  transform:scale(1.6);
-  max-width: 100%;
-  height: auto;
-  overflow: hidden;
+#yaroslav-grdnt {
+  z-index: 1;
 }
+
+
+#alexei-grdnt {
+  z-index: 1;
+
+}
+
+#marat-grdnt {
+  z-index: 1;
+
+}
+
+
+#texture2 {
+  position: absolute;
+  max-width: 100%;
+  height:auto;
+  top: 0px;
+  left: 0px;
+  mix-blend-mode: overlay;
+  opacity: 0.3;
+  transform:scale(3);
+  z-index: 4;
+}
+
+#blue-grdnt {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  max-width: 100%;
+  height:auto;
+  opacity: 0.5;
+  transform:scale(1);
+  z-index: 6;
+  animation: blue-grdnt-anim 30s linear infinite;
+}
+
+@keyframes blue-grdnt-anim {
+  0% {
+    transform:scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(3);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}
+
+#red-grdnt {
+  position: absolute;
+  top: -50px;
+  left: -20px;
+  opacity: 0.3;
+  transform:scale(2);
+  z-index: 5;
+  animation: red-grdnt-anim 20s linear infinite;
+}
+
+@keyframes red-grdnt-anim {
+  0% {
+    transform:scale(2);
+    opacity: 0.5;
+    top: -50px;
+    left: -20px;
+  }
+  50% {
+    transform: scale(3);
+    opacity: 0.7;
+    top: -30px;
+    left: 0px;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0.5;
+    top: -50px;
+    left: -20px;
+  }
+}
+
+#yellow-grdnt {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  opacity: 0.3;
+  transform:scale(1);
+  z-index: 5;
+  animation: yellow-grdnt-anim 40s linear infinite;
+}
+
+@keyframes yellow-grdnt-anim {
+  0% {
+    transform:scale(1);
+    opacity: 0.5;
+    top: -50px;
+    left: -50px;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0.3;
+    top: 100px;
+    left: 0px;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+    top: -50px;
+    left: -50px;
+  }
+}
+
+
+
+
+/*BACK******************************************************************************************************************/
 
 
 #back {
@@ -448,75 +559,6 @@ overflow: hidden;
 #row-back {
   height: 100%;
   text-align:center;
-}
-/*home*/
-
-
-/*middle*/
-
-/*.pinch-zoom-container {
-  position:relative;
-  height: 1366px;
-  max-width: 100%;
-}*/
-
-#maratyaroslav {
-  position: fixed;
-  bottom: 0px;
-  right: 0px;
-  opacity: 0.7;
-  mix-blend-mode: darken;
-  max-width: 100%;
-  height: auto;
-}
-
-#maratyaroslavblue {
-  position: fixed;
-  bottom: -5px;
-  right: -5px;
-  opacity: 0.9;
-  mix-blend-mode: darken;
-  z-index: 2;
-  max-width: 100%;
-  height: auto;
-}
-
-#maratyaroslavpink {
-  position: fixed;
-  bottom: 5px;
-  right: 0px;
-  opacity: 0.9;
-  mix-blend-mode: darken;
-  z-index: 3;
-  max-width: 100%;
-  height: auto;
-}
-
-
-#wefunk-pink {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  mix-blend-mode: darken;
-  opacity: 0.5;
-  transform:scale(2);
-  z-index: 0;
-  max-width: 100%;
-  height: auto;
-
-}
-
-#wefunk-blue {
-  position: fixed;
-  top: 40%;
-  left: 50%;
-  mix-blend-mode: darken;
-  opacity: 0.1;
-  transform:scale(3);
-  z-index: 2;
-  max-width: 100%;
-  height: auto;
-
 }
 
 
